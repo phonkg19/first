@@ -10,12 +10,9 @@
     <h1>カタンのサイコロ</h1>
     </header>
     <div class="dice">
+      <input type="button" name="diceRoll" value="スタート" onclick="alert(Math.floor(Math.random()*12+1));">
       <script type="text/javascript">
-        const diceRoll()=>{
-        alert(Math.floor(Math.random()*13));
-        }
       </script>
-      <input type="button" name="diceRoll" value="スタート" onclick="diceRoll()">
     </div>
   </body>
 </html>
