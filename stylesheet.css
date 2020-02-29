@@ -1,3 +1,57 @@
-h1{
-  color:blue;
+body {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dice{
+  margin:0 0 0 10px;
+  text-align: center;
+}
+
+.dice h1{
+  color:#2f4f4f;
+  margin: 80px 0 0 0;
+  text-align: center;
+}
+
+.dice p{
+  display:inline;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: chocolate;
+  position:fixed;
+  top:0;
+  z-index:10;
+  display: block;
+  left:0;
+  opacity: 0.6;
+}
+
+.diceRoll{
+  background-color:firebrick;
+  padding:8px 24px;
+  color:white;
+  opacity:0.8;
+  display: block;
+  text-align: center;
+  border-radius:6px;
+  cursor: pointer;
+  box-shadow: 0 3px lightsalmon;
+  margin-bottom: 5px;
+}
+
+.diceRoll:active{
+  position: relative;
+  top: 3px;
+  box-shadow: none;
 }
