@@ -9,12 +9,16 @@
   <body>
     <script type="text/javascript">
       　const roll=()=>{
+        let b;
+        let s;
         const changeResultBig = document.getElementById("resultBig");
-        changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
+        b=Math.floor(Math.random()*6+1);
+        s=Math.floor(Math.random()*6+1);
+        changeResultBig.innerHTML = b;
         const changeResultSmall = document.getElementById("resultSmall");
-        changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
+        changeResultSmall.innerHTML = s;
         const resultSumF=document.getElementById("resultSumId"); 
-        resultSumF.innerHTML = changeResultBig.innerHTML + changeResultSmall.innerHTML;
+        resultSumF.innerHTML = b + s;
       }
     </script>
     <header>
