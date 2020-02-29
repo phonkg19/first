@@ -1,57 +1,38 @@
-body {
-  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>カタンのサイコロ</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      　const roll=()=>{
+        const changeResultBig = document.getElementById("resultBig");
+        changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
+        const changeResultSmall = document.getElementById("resultSmall");
+        changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
+        const resultSumF= changeResultBig + changeResultSmall;
+        changeResultSumF.innerHTML = document.getElementById("resultSumId");
+      }
+    </script>
+    <header>
+      べんりつーる
+    </header>
 
-*{
-  box-sizing: border-box;
-}
+    <div class="dice">
+      <h1>カタンのサイコロ</h1>
+      <hr>
+      <p id="resultBig">0</p>
+      <p id="resultSmall">0</p>
+      <a href="#" class="diceRoll" onclick="roll()">ダイスロール</a>
+      <p>Two dice result is....</p>
+      <p id="resultSumId">0</p>
+    <script>
+      //document.write("a");
 
-a {
-  text-decoration: none;
-}
-
-.dice{
-  margin:0 0 0 10px;
-  text-align: center;
-}
-
-.dice h1{
-  color:#2f4f4f;
-  margin: 80px 0 0 0;
-  text-align: center;
-}
-
-.dice p{
-  display:inline;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: chocolate;
-  position:fixed;
-  top:0;
-  z-index:10;
-  display: block;
-  left:0;
-  opacity: 0.6;
-}
-
-.diceRoll{
-  background-color:firebrick;
-  padding:8px 24px;
-  color:white;
-  opacity:0.8;
-  display: block;
-  text-align: center;
-  border-radius:6px;
-  cursor: pointer;
-  box-shadow: 0 3px lightsalmon;
-  margin-bottom: 5px;
-}
-
-.diceRoll:active{
-  position: relative;
-  top: 3px;
-  box-shadow: none;
-}
+      //document.write("<div class="resultSum">resultSumF</div>");
+    </script>
+    <!--document.write("<strong>Samurai</strong>");-->
+</html>
