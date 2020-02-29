@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <meta charset="utf-8">
     <title>カタンのサイコロ</title>
   </head>
   <body>
+
     <header>
-    <h1>カタンのサイコロ</h1>
+      べんりつーる
     </header>
+
     <div class="dice">
-      <input type="button" name="diceRoll" value="スタート" onclick="alert(Math.floor(Math.random()*12+1));">
+      <h1>カタンのサイコロ</h1>
+      <hr>
+      <p id="resultBig">0</p>
+      <p id="resultSmall">0</p>
+      <a href="#" class="diceRoll" onclick="roll()">ダイスロール</a>
       <script type="text/javascript">
+        　const roll=()=>{
+          const changeResultBig = document.getElementById("resultBig");
+          changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
+          const changeResultSmall = document.getElementById("resultSmall");
+          changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
+        }
       </script>
+      <table border="10">
+	       <thead>
+		         <tr>
+			       <th>見出し1</th>
+			          <th>見出し2</th>
+		            </tr>
+	               </thead>
+	                <tbody>
+		                  <tr>
+			                     <td >内容1</td>
+			                        <td>内容2</td>
+		                          </tr>
+	                           </tbody>
+	                            <tfoot>
+		                              <tr>
+			                                 <td>フッタセル1</td>
+			                                    <td>フッタセル2</td>
+		                                      </tr>
+	                                       </tfoot>
+                                       </table>
+
+
     </div>
   </body>
 </html>
