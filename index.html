@@ -13,8 +13,8 @@
         changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
         const changeResultSmall = document.getElementById("resultSmall");
         changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
-        const resultSumF= changeResultBig + changeResultSmall;
-        resultSumF.innerHTML = document.getElementById("resultSumId");
+        const resultSumF=document.getElementById("resultSumId"); 
+        resultSumF.innerHTML = changeResultBig + changeResultSmall;
       }
     </script>
     <header>
