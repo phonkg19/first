@@ -7,7 +7,16 @@
     <title>カタンのサイコロ</title>
   </head>
   <body>
-
+    <script type="text/javascript">
+      　const roll=()=>{
+        const changeResultBig = document.getElementById("resultBig");
+        changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
+        const changeResultSmall = document.getElementById("resultSmall");
+        changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
+        const resultSumF= changeResultBig + changeResultSmall;
+        changeResultSumF.innerHTML = document.getElementById("resultSumId");
+      }
+    </script>
     <header>
       べんりつーる
     </header>
@@ -18,36 +27,12 @@
       <p id="resultBig">0</p>
       <p id="resultSmall">0</p>
       <a href="#" class="diceRoll" onclick="roll()">ダイスロール</a>
-      <script type="text/javascript">
-        　const roll=()=>{
-          const changeResultBig = document.getElementById("resultBig");
-          changeResultBig.innerHTML = Math.floor(Math.random()*6+1);
-          const changeResultSmall = document.getElementById("resultSmall");
-          changeResultSmall.innerHTML = Math.floor(Math.random()*6+1);
-        }
-      </script>
-      <table border="10">
-	       <thead>
-		         <tr>
-			       <th>見出し1</th>
-			          <th>見出し2</th>
-		            </tr>
-	               </thead>
-	                <tbody>
-		                  <tr>
-			                     <td >内容1</td>
-			                        <td>内容2</td>
-		                          </tr>
-	                           </tbody>
-	                            <tfoot>
-		                              <tr>
-			                                 <td>フッタセル1</td>
-			                                    <td>フッタセル2</td>
-		                                      </tr>
-	                                       </tfoot>
-                                       </table>
+      <p>Two dice result is....</p>
+      <p id="resultSumId">0</p>
+    <script>
+      //document.write("a");
 
-
-    </div>
-  </body>
+      //document.write("<div class="resultSum">resultSumF</div>");
+    </script>
+    <!--document.write("<strong>Samurai</strong>");-->
 </html>
