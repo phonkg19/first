@@ -18,9 +18,20 @@
         changeResultBig.innerHTML = b;
         const changeResultSmall = document.getElementById("resultSmall");
         changeResultSmall.innerHTML = s;
-        const resultSumF=document.getElementById("resultSumId"); 
+        const resultSumF=document.getElementById("resultSumId");
         resultSumF.innerHTML = sum;
-      }
+        let bigDice=6;
+        let smallDice=6;
+        let count=0;
+        for(let i=0;i<bigDice;i+=1){
+          for(let j=0;j<smallDice;j+=1){
+            if(i+j+2==result){
+              count+=1;
+            }
+          }
+        }
+
+        }
     </script>
     <header>
       べんりつーる
@@ -34,7 +45,8 @@
       <a href="#" class="diceRoll" onclick="roll()">ダイスロール</a>
       <p>Two dice result is....</p>
       <p id="resultSumId">0</p>
-    <script>
+      <p>この出目は</p>
+    <script>6
       //document.write("a");
 
       //document.write("<div class="resultSum">resultSumF</div>");
